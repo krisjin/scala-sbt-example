@@ -7,10 +7,9 @@
 *.class
 *.classpath
 *.settings
-*.project
+project
 .idea
 log
 .gradle
 target/
-~
 *.jar
