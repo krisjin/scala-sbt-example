@@ -4,7 +4,7 @@
 		module="scala-sbt-example$sources_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20140729060208"
+		publication="20140729150556"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>
