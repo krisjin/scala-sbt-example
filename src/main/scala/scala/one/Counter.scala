@@ -12,4 +12,10 @@ class Counter {
 
      def current()=value
 
+     def sum(numbers:Int*):Int={
+       var result=0
+       for(number<- numbers) result+=number
+       result
+     }
+
 }

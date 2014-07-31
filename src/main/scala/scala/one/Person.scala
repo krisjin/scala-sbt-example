@@ -15,5 +15,11 @@ class Person {
       this.age=age
      }
 
+
+    def getPersonNames(names:String*){
+
+      
+    }
+
     
 }
