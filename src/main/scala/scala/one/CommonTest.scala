@@ -7,6 +7,7 @@ import scala._
  * Created by kris on 2014/7/30.
  */
 object CommonTest {
+
   def main(args:Array[String]){
       val p1=new Person()
       val p2=new Person("krisjin")
@@ -53,6 +54,14 @@ object CommonTest {
     val logEnable:Boolean=true
     val isStart:Boolean=false
     if(logEnable || isStart)println("output log.......") else println("not output log.....")
-    println(22/0)
+
+    val str="ccc"
+    log(str+1/0)
+
   }
+
+
+  val logEnable=false
+  def log(msg: =>String) =
+    if (logEnable) println(msg)
 }
