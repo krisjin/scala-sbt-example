@@ -15,6 +15,8 @@ object CommonTest {
       val num=math.sqrt(4)
       println(num)
 
+      p1.setPersonNames("zhagnsan","lisi","wangwu")
+
     //Array
     val nums =new Array[Int](10)
     println(nums)

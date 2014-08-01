@@ -16,9 +16,10 @@ class Person {
      }
 
 
-    def getPersonNames(names:String*){
+    def setPersonNames(names:String*){
+      for(name<- names) println("name:"+name)
 
-      
+      if(names.length>0) println("head:"+names.head+"  tail:"+names.tail)
     }
 
     
