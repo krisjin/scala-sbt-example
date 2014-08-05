@@ -1,5 +1,5 @@
 package scala.four
-
+import scala.collection.JavaConversions.mapAsScalaMap
 /**
  * Created by root on 14-8-5.
  */
@@ -33,8 +33,21 @@ object MapTest {
     val reverseMap = for((k,v) <- newMap) yield (v,k)
 
     println("\n"+reverseMap)
+    sort()
+    oper()
   }
 
+  def sort(){
+    val scores = scala.collection.immutable.SortedMap("name" ->"krisjin" , "age" -> 99)
+    println(scores)
 
+    val months = scala.collection.mutable.LinkedHashMap("January" -> 1,"February" -> 2,"March" -> 3,"April" -> 4,"May" ->5)
+    println(months)
+  }
+
+  def oper(){
+    val scores: scala.collection.mutable.Map[String, Int] = new java.util.TreeMap[String, Int]
+    println(scores)
+  }
 
 }
