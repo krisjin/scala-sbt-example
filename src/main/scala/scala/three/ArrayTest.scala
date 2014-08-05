@@ -1,6 +1,7 @@
 package scala.three
 
 import scala.collection.mutable.ArrayBuffer
+import scala.util.Sorting
 
 /**
  * Created by kris on 2014/8/5.
@@ -64,6 +65,7 @@ object ArrayTest {
 
     test2()
     test3()
+    arrayAlgorithms()
   }
 
   def test2() {
@@ -89,18 +91,43 @@ object ArrayTest {
 
   def test3() {
     var arr = new ArrayBuffer[Int]()
-    arr +=(1, 2, 3, -4, 5, 6, -7, 8, 9, -10,33,-322,32,-123,789)
+    arr +=(1, 2, 3, -4, 5, 6, -7, 8, 9, -10, 33, -322, 32, -123, 789)
     var first = true
     val indexes = for (i <- 0 until arr.length if first || arr(i) >= 0) yield {
       if (arr(i) < 0) first = false
       i
     }
-
     for (j <- 0 until indexes.length) arr(j) = arr(indexes(j))
     arr.trimEnd(arr.length - indexes.length)
-
     println(arr)
-
   }
 
+  def arrayAlgorithms() {
+    val arr = Array(9, 8, 7, 6, 5, 4, 3, 2, 1)
+    val arrBuf = ArrayBuffer(1, 9, 6, 4, 3, 8, 7, 5, 2, 10)
+    val strArr = Array("year", "month", "day","zoo")
+    val newArr = arr.sorted
+    val newArrBuf = arrBuf.sorted
+    val arrSum = arr.sum
+    val newArrBufSum = arrBuf.sum
+    val arrMaxVal=arr.max
+    val arrMinVal=arr.min
+    val arrBufMaxVal=arrBuf.max
+    val desc=ArrayBuffer(1,2,3,44,62,3,0).sortWith(_ > _)
+    val newStrArr=strArr.sorted
+    val descNewStrArr=strArr.sortWith(_ > _)
+    val arryQuickSort=Sorting.quickSort(arr)
+    println("Array Sort=" + newArr.mkString(" "))
+    println("ArrayBuffer Sort=" + newArrBuf.mkString(" "))
+    println("Array Sum()="+arrSum)
+    println("ArrayBuffer Sum()="+newArrBufSum)
+    println("Array Max()="+arrMaxVal)
+    println("Array Min()="+arrMinVal)
+    println("ArrayBuffer Max()="+arrBufMaxVal)
+    println("ArrayBuffer desc()="+desc.mkString(" ") )
+    println("String Array Sort="+newStrArr.mkString(" "))
+    println("String Array Sort Desc="+descNewStrArr.mkString(" "))
+    Sorting.quickSort(arr)
+    println("Array quick sort="+arr.mkString(" "))
+  }
 }
