@@ -45,5 +45,62 @@ object ArrayTest {
     println()
     for (j <- (0 until arrBuf.length).reverse) print(arrBuf(j) + " ")
 
+    val eles = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    val newArr = for (ele <- eles) yield ele * 2
+    println()
+    print("原始集合：")
+    for (e <- eles) print(e + " ")
+    println()
+    print("产生的新集合：")
+    for (e <- newArr) print(e + " ")
+
+    val conditionOper = for (e <- eles if e % 2 == 0) yield e * 2
+    println()
+    for (c <- conditionOper) print(c + " ")
+
+    val filterArr = eles.filter(_ % 2 == 0).map(2 * _)
+    println()
+    for (e <- filterArr) print(e + " ")
+
+    test2()
+    test3()
   }
+
+  def test2() {
+    var arr = new ArrayBuffer[Int]()
+    arr +=(1, 2, 3, -4, 5, 6, -7, 8, 9, -10)
+    var first = true
+    var n = arr.length
+    var i = 0
+    while (i < n) {
+      if (arr(i) >= 0) i += 1
+      else {
+        if (first) {
+          first = false;
+          i += 1
+        } else {
+          arr.remove(i)
+          n -= 1
+        }
+      }
+    }
+    println("\n" + arr)
+  }
+
+  def test3() {
+    var arr = new ArrayBuffer[Int]()
+    arr +=(1, 2, 3, -4, 5, 6, -7, 8, 9, -10,33,-322,32,-123,789)
+    var first = true
+    val indexes = for (i <- 0 until arr.length if first || arr(i) >= 0) yield {
+      if (arr(i) < 0) first = false
+      i
+    }
+
+    for (j <- 0 until indexes.length) arr(j) = arr(indexes(j))
+    arr.trimEnd(arr.length - indexes.length)
+
+    println(arr)
+
+  }
+
 }
