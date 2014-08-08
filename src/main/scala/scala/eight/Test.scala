@@ -1,5 +1,7 @@
 package scala.eight
 
+import java.text.SimpleDateFormat
+
 /**
  * Created by kris on 2014/8/8.
  */
@@ -23,5 +25,26 @@ object Test extends App {
     }
   }
   nousClass.hi("ppppppppppppppppp")
-  ext()
+  println(nousClass.name2)
+
+  //ext()
+  def testHouse() {
+    val house = new ZhangSanHouse(100, "三居")
+    val add = house.developers()
+    println(add)
+    house.money
+    val od = house.openDate
+    val format = new SimpleDateFormat("yyyy-MM-dd")
+    val formatOpenDate = format.format(od)
+    println("Open date:" + formatOpenDate)
+  }
+
+  def testAnt() {
+   val ant = new Ant
+
+   println(ant.range)
+  }
+
+  //  testHouse
+  testAnt()
 }
