@@ -43,6 +43,8 @@ object Test extends App {
    val ant = new Ant
 
    println(ant.range)
+   println("Array size="+ant.env.size)
+
   }
 
   //  testHouse
