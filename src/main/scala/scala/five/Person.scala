@@ -8,3 +8,7 @@ class Person(name: String, age: Int) {
     def say= println("hello!")
 
 }
+class Person2 private(val id:Int){
+
+
+}
