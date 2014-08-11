@@ -15,4 +15,6 @@ object Oper extends App {
 
   for ((k, v) <- scores) println(k + ":" + v)
   println(scores("kris"))
+
+  val app = ApplyTest("kris", "28")
 }
