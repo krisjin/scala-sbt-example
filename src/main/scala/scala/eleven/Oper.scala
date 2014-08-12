@@ -17,4 +17,8 @@ object Oper extends App {
   println(scores("kris"))
 
   val app = ApplyTest("kris", "28")
+  println(1 toString())
+
+
+
 }
