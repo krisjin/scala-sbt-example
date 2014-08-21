@@ -31,6 +31,12 @@ object CollectionTest extends App {
     cur = cur.next
   }
 
-  println(mlst.elem)
+  val sets = Set(2,2,8,1)+9//Set(2,8,1,9)
+
+  val weekdays = scala.collection.mutable.LinkedHashSet("Mo","Tu","We","Th","Fr")
+
+  val sortSet  = scala.collection.immutable.SortedSet(9,3,4,7,8)
+
+  println(sortSet)
 
 }
