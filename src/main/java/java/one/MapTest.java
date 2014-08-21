@@ -7,9 +7,9 @@ import java.util.TreeMap;
  */
 public class MapTest {
 
-    public static TreeMap getTreeMap(){
-        TreeMap tm=new TreeMap<String,Integer>();
-        tm.put("age" ,28);
+    public static TreeMap getTreeMap() {
+        TreeMap tm = new TreeMap<String, Integer>();
+        tm.put("age", 28);
         return tm;
     }
 }

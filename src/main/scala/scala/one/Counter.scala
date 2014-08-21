@@ -5,17 +5,18 @@ package scala.one
  */
 class Counter {
 
-     private var value=0
-     def increment(){
-       value+=1
-     }
+  private var value = 0
 
-     def current()=value
+  def increment() {
+    value += 1
+  }
 
-     def sum(numbers:Int*):Int={
-       var result=0
-       for(number<- numbers) result+=number
-       result
-     }
+  def current() = value
+
+  def sum(numbers: Int*): Int = {
+    var result = 0
+    for (number <- numbers) result += number
+    result
+  }
 
 }

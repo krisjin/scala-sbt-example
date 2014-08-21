@@ -6,8 +6,8 @@ package scala.eight
 class Creature {
   println("父类被调用")
   val range: Int = 10
-  println("父类中rang变量值为："+range)
+  println("父类中rang变量值为：" + range)
   val env: Array[Int] = new Array[Int](range)
-  println("父类中rang变量值为："+range)
+  println("父类中rang变量值为：" + range)
 
 }

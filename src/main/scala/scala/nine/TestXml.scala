@@ -2,8 +2,6 @@ package scala.nine
 
 import java.io._
 
-import scala.collection.mutable.ArrayBuffer
-
 /**
  * Created by kris on 2014/8/8.
  */

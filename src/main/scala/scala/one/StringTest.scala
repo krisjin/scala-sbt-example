@@ -32,14 +32,14 @@ object StringTest {
 
     println(math.sqrt(num$))
 
-    val reval= sum(1 to 100:_*)
-    println("return value="+reval)
+    val reval = sum(1 to 100: _*)
+    println("return value=" + reval)
 
   }
 
-  def sum(num9:Int*)={
-    var result=0
-    for(num<-num9) result+=num
+  def sum(num9: Int*) = {
+    var result = 0
+    for (num <- num9) result += num
     result
   }
 

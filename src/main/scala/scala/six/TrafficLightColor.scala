@@ -6,8 +6,8 @@ package scala.six
 object TrafficLightColor extends Enumeration {
   //  val Red, Yellow, Green = Value
   //type TrafficLightColor =Value
-  val Red = Value(1,"Reds")
-  val Yellow = Value(2,"Yellows")
-  val Green = Value(3,"Greens")
+  val Red = Value(1, "Reds")
+  val Yellow = Value(2, "Yellows")
+  val Green = Value(3, "Greens")
 }
 

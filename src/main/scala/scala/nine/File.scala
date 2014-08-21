@@ -1,6 +1,11 @@
 package scala.nine
 
-import java.io._//{File, FileInputStream, PrintWriter}
+import java.io._
+import java.nio.file.attribute.BasicFileAttributes
+import java.nio.file.{FileVisitResult, Files, Path, SimpleFileVisitor}
+
+//{File, FileInputStream, PrintWriter}
+
 import java.nio.file.attribute.BasicFileAttributes
 import java.nio.file.{FileVisitResult, Files, Path, SimpleFileVisitor}
 

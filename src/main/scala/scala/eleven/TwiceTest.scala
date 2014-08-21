@@ -5,9 +5,9 @@ package scala.eleven
  */
 object TwiceTest extends App {
   val x = Twice(43532523)
-  var retParam=0
+  var retParam = 0
   x match {
-    case Twice(x) =>retParam=x
+    case Twice(x) => retParam = x
   }
   println(retParam)
 }

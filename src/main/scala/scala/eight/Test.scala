@@ -40,10 +40,10 @@ object Test extends App {
   }
 
   def testAnt() {
-   val ant = new Ant
+    val ant = new Ant
 
-   println(ant.range)
-   println("Array size="+ant.env.size)
+    println(ant.range)
+    println("Array size=" + ant.env.size)
 
   }
 

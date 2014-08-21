@@ -20,5 +20,4 @@ object Oper extends App {
   println(1 toString())
 
 
-
 }

@@ -14,8 +14,8 @@ object EnumeTest extends App {
       else println(e.id + ":" + "Crossing")
     }
 
-    val yellow= TrafficLightColor(2)
-    val red= TrafficLightColor.withName("Reds")
+    val yellow = TrafficLightColor(2)
+    val red = TrafficLightColor.withName("Reds")
     println(red)
     println(yellow)
   }

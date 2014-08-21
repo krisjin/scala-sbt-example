@@ -105,29 +105,29 @@ object ArrayTest {
   def arrayAlgorithms() {
     val arr = Array(9, 8, 7, 6, 5, 4, 3, 2, 1)
     val arrBuf = ArrayBuffer(1, 9, 6, 4, 3, 8, 7, 5, 2, 10)
-    val strArr = Array("year", "month", "day","zoo")
+    val strArr = Array("year", "month", "day", "zoo")
     val newArr = arr.sorted
     val newArrBuf = arrBuf.sorted
     val arrSum = arr.sum
     val newArrBufSum = arrBuf.sum
-    val arrMaxVal=arr.max
-    val arrMinVal=arr.min
-    val arrBufMaxVal=arrBuf.max
-    val desc=ArrayBuffer(1,2,3,44,62,3,0).sortWith(_ > _)
-    val newStrArr=strArr.sorted
-    val descNewStrArr=strArr.sortWith(_ > _)
-    val arryQuickSort=Sorting.quickSort(arr)
+    val arrMaxVal = arr.max
+    val arrMinVal = arr.min
+    val arrBufMaxVal = arrBuf.max
+    val desc = ArrayBuffer(1, 2, 3, 44, 62, 3, 0).sortWith(_ > _)
+    val newStrArr = strArr.sorted
+    val descNewStrArr = strArr.sortWith(_ > _)
+    val arryQuickSort = Sorting.quickSort(arr)
     println("Array Sort=" + newArr.mkString(" "))
     println("ArrayBuffer Sort=" + newArrBuf.mkString(" "))
-    println("Array Sum()="+arrSum)
-    println("ArrayBuffer Sum()="+newArrBufSum)
-    println("Array Max()="+arrMaxVal)
-    println("Array Min()="+arrMinVal)
-    println("ArrayBuffer Max()="+arrBufMaxVal)
-    println("ArrayBuffer desc()="+desc.mkString(" ") )
-    println("String Array Sort="+newStrArr.mkString(" "))
-    println("String Array Sort Desc="+descNewStrArr.mkString(" "))
+    println("Array Sum()=" + arrSum)
+    println("ArrayBuffer Sum()=" + newArrBufSum)
+    println("Array Max()=" + arrMaxVal)
+    println("Array Min()=" + arrMinVal)
+    println("ArrayBuffer Max()=" + arrBufMaxVal)
+    println("ArrayBuffer desc()=" + desc.mkString(" "))
+    println("String Array Sort=" + newStrArr.mkString(" "))
+    println("String Array Sort Desc=" + descNewStrArr.mkString(" "))
     Sorting.quickSort(arr)
-    println("Array quick sort="+arr.mkString(" "))
+    println("Array quick sort=" + arr.mkString(" "))
   }
 }
