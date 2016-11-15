@@ -6,8 +6,12 @@ import scala.util.Random
  * Created by root on 14-8-3.
  */
 object StringTest {
-
+  /**
+   * main 函数
+   * @param args
+   */
   def main(args: Array[String]) {
+
     var str = "scala"
     var num: BigInt = 12399
     var seciNum: BigDecimal = 12345
@@ -35,11 +39,24 @@ object StringTest {
     val reval = sum(1 to 100: _*)
     println("return value=" + reval)
 
+    //类型转换
+    var a: Int = 11;
+    var b: Long = a.toLong;
+    var c: Double = b.toDouble;
+    var d: String = c.toString;
+    println("类型转换：" + c);
+    println("类型转换：" + d);
+
+    //操作符重载
+    //    val e = 8 + 5;
+    var e = (8).+(5)
+    println("操作符重载:" + e)
+
   }
 
-  def sum(num9: Int*) = {
+  def sum(num: Int*) = {
     var result = 0
-    for (num <- num9) result += num
+    for (num <- num) result += num
     result
   }
 
