@@ -6,21 +6,25 @@ import scala.util.Random
  * Created by root on 14-8-3.
  */
 object StringTest {
-  /**
-   * main 函数
-   * @param args
-   */
+
   def main(args: Array[String]) {
 
-    var str = "scala"
-    var num: BigInt = 12399
-    var seciNum: BigDecimal = 12345
-    var num$ = 6
-    val num3: BigInt = 9333
-    println("Hello".intersect("World"))
+    var str = "scala";
+    val num: BigInt = 12399;
+    val decimalNum: BigDecimal = 12345;
+    val num$ = 6
 
-    println(str.toLowerCase())
-    println(str.toUpperCase())
+    //intersect方法输出两个字符串共同的一组字符
+    val retVal = "Hello".intersect("World");
+    println(retVal);
+
+    //toLowerCase 输出小写形式
+    println(str.toLowerCase());
+
+    //toUpperCase 输出大写形式
+    println(str.toUpperCase());
+
+    //concat 字符串连接
     println(str.concat(" hello!"))
     println(str.drop(1))
     println("distinct:" + str.distinct)
@@ -31,7 +35,7 @@ object StringTest {
 
 
     println(num * num * num * num)
-    println(seciNum * seciNum * seciNum * seciNum * seciNum)
+    println(decimalNum * decimalNum * decimalNum * decimalNum * decimalNum)
     println(BigInt.probablePrime(100, Random))
 
     println(math.sqrt(num$))
