@@ -1,5 +1,7 @@
 package scala
 
+import scala.math._
+
 /**
  * Scala基础语法
  *
@@ -45,7 +47,7 @@ object ScalaBaseGrammar {
     var h: Long = g.toLong;
     var i: Double = h.toDouble;
 
-
+    testF;
   }
 
 
@@ -87,4 +89,39 @@ object ScalaBaseGrammar {
    * 定义一个匿名函数
    */
   var fun5 = (x: Int, y: Int) => x - y;
+
+  def testF: Unit = {
+
+    println(sqrt(22))
+    println(pow(2, 4))
+    println(min(22, 2))
+
+    val s = if (1 > 2) 1 else 2
+    var s11 = 0
+    if (1 > 0) s11 = 11 else s11 = -1
+
+    var dd = {
+      val a = 1 * 2;
+      val b = 2 * 1;
+      a * b
+    }
+
+    println(s)
+    println(s11)
+    println(dd)
+
+
+    val s12 = "Hello"
+
+    var sum ="----";
+
+    for (j <- 0 until s12.length) {
+//      sum+=j;
+      println(s12(j))
+    }
+
+
+    println(sum)
+
+  }
 }
